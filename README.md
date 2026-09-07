@@ -6,7 +6,7 @@ The primary model has one LSTM layer with 32 hidden units. The larger version ha
 
 ## Observed trade
 
-On October 10, 2025, the forecast for the half hour beginning at 9 p.m. UTC assigned about 65% probability to an increase. The strategy held Bitcoin throughout the interval. The opening price fell from 114,266.82 to 108,432.09 USDT, a return of about −5.1%. Turnover and trading costs were zero during this interval.
+On October 10, 2025, the forecast for the half hour beginning at 9 p.m. UTC assigned about 65% probability to an increase. The larger LSTM assigned 63.20% probability to an increase over the same interval. The strategy held Bitcoin throughout the interval. The opening price fell from 114,266.82 to 108,432.09 USDT, a return of about −5.1%. Turnover and trading costs were zero during this interval.
 
 ![Bitcoin candlesticks and volume with the actual trade entry, exit, peak, low and maximum price drawdown](failure-example.png)
 
