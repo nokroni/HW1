@@ -17,7 +17,7 @@ Both LSTMs received the previous 20 completed candles' close to close returns. E
 
 Training used binary cross entropy and Adam with a learning rate of 0.001 and batches of 128. The training period ran from October 2022 through December 2023. January through June 2024 supplied validation data. Training allowed up to 50 epochs and stopped after five epochs without improved validation loss. The best validation checkpoint was selected. This comparison uses the primary seed for each size. Four additional seeds were evaluated for the smaller model.
 
-The language model was **GPT-6 Astra**, as identified in the historical prediction session records.
+The language model used was GPT-6 Astra. It was accessed through the Codex interface, using a separate subagent with a fresh context for each prediction.
 
 ## Individual predictions
 
@@ -48,10 +48,8 @@ Times below give the simulated entry at a candle's opening price in UTC. Each ta
 
 The net figure treats every opportunity as an isolated decision starting from cash. A long forecast buys at the first opening price and sells at the next one. Cash earns zero. Fees and slippage are assumed to total 0.09% for each one way trade. These averages are not a continuous portfolio return or a drawdown estimate.
 
-## What this comparison supports
+## Evaluation method
 
 The cases were selected at six evenly spaced positions in each evaluation period. Each language model forecast came from a fresh context with the same 20 standardized returns used by the LSTMs and eight fixed examples from the training period. It received no ticker, timestamp, future price or evaluation label. Each case received one response with no retries. All three models used the same target, decision threshold and scoring.
 
-The language model sometimes missed a decline that both LSTMs predicted. On July 23, 2025, it correctly predicted a decline that both LSTMs missed. A correct up forecast could still lose money when the increase was smaller than trading costs.
-
-Twelve observations are too few to establish a general model ranking. The LLM received a few training examples in its prompt, while the LSTMs learned from the full training period. Possible historical overlap with the LLM's pretraining data is unknown. The comparison therefore does not isolate the effect of model size. These are exploratory historical simulations, not live trades.
+These results are historical simulations. No real trades occurred.
