@@ -45,6 +45,9 @@ Times below give the simulated entry at a candle's opening price in UTC. Each ta
 | Primary LSTM | 2 of 6 | 2 of 6 | 4 of 12 | -0.0773% |
 | Larger LSTM | 1 of 6 | 3 of 6 | 4 of 12 | -0.0947% |
 | GPT-6 Astra | 5 of 6 | 2 of 6 | 7 of 12 | -0.1583% |
+| Always down and holding cash | 2 of 6 | 2 of 6 | 4 of 12 | 0.0000% |
+
+The twelve cases contain four rises and eight declines. Always predicting down makes four errors and holds cash in every case under the same decision rule.
 
 The net figure treats every opportunity as an isolated decision starting from cash. A long forecast buys at the first opening price and sells at the next one. Cash earns zero. Fees and slippage are assumed to total 0.09% for each one way trade. These averages are not a continuous portfolio return or a drawdown estimate.
 

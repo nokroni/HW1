@@ -38,6 +38,14 @@ The primary strategy's returns before costs were +34.82% in the first period and
 
 During validation from January through June 2024, the primary strategy returned -86.28% after the same assumed costs.
 
+## Prediction statistics
+
+For the frozen primary LSTM, directional error increased from 47.0615% over 8,831 forecasts in July through December 2024 to 47.9187% over 23,279 forecasts in January 2025 through April 2026. The difference was +0.8572 percentage points. Its nominal 95% percentile bootstrap interval was -0.2693 to +2.0112 percentage points.
+
+The interval uses 2,000 resamples of whole UTC-day groups, separately within each evaluation period. Each sampled group retains its error count and observation count. Error rates use the total errors divided by the total observations in each resample. This keeps within-day observations together, but does not preserve dependence across days or include uncertainty from training and model selection.
+
+Among the primary model's forecasts from January 2025 through April 2026, 641 assigned a probability greater than 60% and at most 70% to a rise. Their mean predicted probability was 62.8228%. There were 333 rises, or 51.9501% of those observations. These are descriptive statistics for dependent observations. No confidence interval was computed for this calibration bin.
+
 ## Comparing with a language model
 
 A separate comparison gave GPT-6 Astra the same historical inputs and prediction targets for 12 opportunities. It made seven directional errors. Each LSTM made four errors on those same cases. The [individual prediction table](model-comparison.md#individual-predictions) includes probabilities, forecast directions and actual returns, with wrong forecasts highlighted.
