@@ -36,6 +36,8 @@ The following results compare the primary LSTM with a larger LSTM over identical
 
 The primary strategy's returns before costs were +34.82% in the first period and +0.49% in the second period.
 
+During validation from January through June 2024, the primary strategy returned -86.28% after the same assumed costs.
+
 ## Comparing with a language model
 
 A separate comparison gave GPT-6 Astra the same historical inputs and prediction targets for 12 opportunities. It made seven directional errors. Each LSTM made four errors on those same cases. The [individual prediction table](model-comparison.md#individual-predictions) includes probabilities, forecast directions and actual returns, with wrong forecasts highlighted.
